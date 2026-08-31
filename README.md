@@ -39,10 +39,11 @@ https://github.com/mansithakur18/Mental-Health-Score
 
 🚀 Deployed using Render
 
-🔄 How It Works
+## 🔄 How It Works
 
 **The application follows this workflow:**
 
+```text
                     USER
                      │
                      ▼
@@ -79,29 +80,32 @@ https://github.com/mansithakur18/Mental-Health-Score
           │ Predicted Mental    │
           │    Health Score     │
           └─────────────────────┘
+```
 
-📋 **Input Features**
+## 📋 Input Features
 
 The application accepts the following information:
 
-Age                    : User age
-Gender                 : Gender category
-Country                : User's country
-Academic_Level         : High School, Undergraduate, or Graduate
-Most_Used_Platform     : Primary social-media platform
-Purpose_Of_Use         : Networking, Education, Entertainment, or News
-Avg_Daily_Usage_Hours  : Average social-media usage in hours
-Daily_Unlocks          : Number of phone unlocks per day
-Study_Hours            : Daily study hours
-Physical_Activity_Hours: Physical activity hours
-Sleep_Hours_Per_Night  : Average sleep hours per night
-Stress_Level           : Low, Medium, High, or Very High
+| Feature | Description |
+|---|---|
+| `Age` | User age |
+| `Gender` | Gender category |
+| `Country` | User's country |
+| `Academic_Level` | High School, Undergraduate, or Graduate |
+| `Most_Used_Platform` | Primary social-media platform |
+| `Purpose_Of_Use` | Networking, Education, Entertainment, or News |
+| `Avg_Daily_Usage_Hours` | Average social-media usage in hours |
+| `Daily_Unlocks` | Number of phone unlocks per day |
+| `Study_Hours` | Daily study hours |
+| `Physical_Activity_Hours` | Physical activity hours |
+| `Sleep_Hours_Per_Night` | Average sleep hours per night |
+| `Stress_Level` | Low, Medium, High, or Very High |
 
 **🤖 Machine Learning**
 
 The trained machine-learning model is stored as:
 
-Mental_Health_Model.pkl
+`Mental_Health_Model.pkl`
 
 The model is loaded using joblib and used by the FastAPI backend to generate predictions.
 
@@ -135,9 +139,9 @@ This helps maintain consistency with the features expected by the trained model.
 ⚙️ **Backend**
 
 The backend is built using FastAPI.
+### API Endpoint
 
-API Endpoint
-POST /predict
+`POST /predict`
 
 The API accepts validated JSON input and returns:
 
@@ -148,7 +152,7 @@ API Documentation
 
 When running locally, FastAPI automatically provides interactive API documentation at:
 
-http://127.0.0.1:8000/docs
+`http://127.0.0.1:8000/docs`
 
 🛠️ **Technology Stack**
 Machine Learning
@@ -171,55 +175,84 @@ Version Control
 Git
 GitHub
 
-📁 **Project Structure**
+## 📁 Project Structure
+
+```text
 Mental-Health-Score/
 │
 ├── Mental_Health_Model.pkl
-│       └── Trained machine learning model
+│   └── Trained machine learning model
 │
 ├── Mental_health.ipynb
-│       └── Data analysis and model development
+│   └── Data analysis and model development
 │
 ├── Student Social Media And Mental Health Impact.csv
-│       └── Dataset
+│   └── Dataset
 │
 ├── main.py
-│       └── FastAPI backend and prediction API
+│   └── FastAPI backend and prediction API
 │
 ├── index.html
-│       └── Web application structure
+│   └── Web application structure
 │
 ├── style.css
-│       └── User interface styling and animations
+│   └── User interface styling and animations
 │
 ├── script.js
-│       └── Frontend interaction and API communication
+│   └── Frontend interaction and API communication
 │
 ├── requirements.txt
-│       └── Python dependencies
+│   └── Python dependencies
 │
 ├── runtime.txt
-│       └── Deployment Python runtime configuration
+│   └── Deployment Python runtime configuration
 │
 └── README.md
-        └── Project documentation
+    └── Project documentation
+```
         
 🚀 **Run Locally**
-1. Clone the repository
-git clone https://github.com/mansithakur18/Mental-Health-Score.git
-2. Open the project
-cd Mental-Health-Score
-3. Install dependencies
-pip install -r requirements.txt
-4. Start the FastAPI server
-python -m uvicorn main:app --reload
-5. Open the application
-http://127.0.0.1:8000/
-6. Open API documentation
-http://127.0.0.1:8000/docs
 
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/mansithakur18/Mental-Health-Score.git
+```
+
+### 2. Open the project
+
+```bash
+cd Mental-Health-Score
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Start the FastAPI server
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+### 5. Open the application
+
+```text
+http://127.0.0.1:8000/
+```
+
+### 6. Open API documentation
+
+```text
+http://127.0.0.1:8000/docs
+```
 🔌 **API Example**
-Request
+
+### Request
+
+```json
 {
   "Age": 21,
   "Gender": "Female",
@@ -234,10 +267,15 @@ Request
   "Sleep_Hours_Per_Night": 7,
   "Stress_Level": "Medium"
 }
-Response
+```
+
+### Response
+
+```json
 {
   "predicted_mental_health_score": 6.06
 }
+```
 
 The exact prediction will vary depending on the input values and trained model.
 
