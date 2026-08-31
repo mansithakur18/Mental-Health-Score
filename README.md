@@ -16,17 +16,29 @@ https://github.com/mansithakur18/Mental-Health-Score
 
 **✨ Features**
 🧠 Machine-learning-based mental health score prediction
+
 📱 Uses social-media usage patterns as input
+
 😴 Considers sleep and physical activity
+
 📚 Considers study hours and academic level
+
 🧠 Includes perceived stress level
+
 🔓 Considers daily phone unlock frequency
+
 🌍 Handles country information with country grouping
+
 ⚡ FastAPI REST API
+
 ✅ Pydantic input validation
+
 🎨 Interactive responsive web interface
+
 📊 Visual prediction result
+
 🚀 Deployed using Render
+
 🔄 How It Works
 
 **The application follows this workflow:**
@@ -72,22 +84,22 @@ https://github.com/mansithakur18/Mental-Health-Score
 
 The application accepts the following information:
 
-Feature	Description
-Age	User age
-Gender	Gender category
-Country	User's country
-Academic Level	High School, Undergraduate, or Graduate
-Most Used Platform	Primary social-media platform
-Purpose of Use	Networking, Education, Entertainment, or News
-Average Daily Usage	Average social-media usage in hours
-Daily Unlocks	Number of phone unlocks per day
-Study Hours	Daily study hours
-Physical Activity	Physical activity hours
-Sleep Hours	Average sleep hours per night
-Stress Level	Low, Medium, High, or Very High
-🤖 Machine Learning
+Age                    : User age
+Gender                 : Gender category
+Country                : User's country
+Academic_Level         : High School, Undergraduate, or Graduate
+Most_Used_Platform     : Primary social-media platform
+Purpose_Of_Use         : Networking, Education, Entertainment, or News
+Avg_Daily_Usage_Hours  : Average social-media usage in hours
+Daily_Unlocks          : Number of phone unlocks per day
+Study_Hours            : Daily study hours
+Physical_Activity_Hours: Physical activity hours
+Sleep_Hours_Per_Night  : Average sleep hours per night
+Stress_Level           : Low, Medium, High, or Very High
 
-**The trained machine-learning model is stored as:**
+**🤖 Machine Learning**
+
+The trained machine-learning model is stored as:
 
 Mental_Health_Model.pkl
 
